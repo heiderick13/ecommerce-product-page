@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Lighter-orange: hsl(26, 85%, 70%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  --Very-dark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+}
+
+/* GERAL */
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.navbar {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid hsla(217, 9%, 45%, 0.2);
+}
+
+.user-area i {
+  font-size: 20px;
+}
+
+main > .container {
+  padding: 5rem 7rem 2rem;
+}
+
+/* IMAGENS DO PRODUTO */
+
+#product-imgs img {
+  border-radius: 1rem;
+}
+
+.main-img,
+#thumbnails {
+  width: 90%;
+}
+
+#thumbnails {
+  padding: 2rem 0;
+  cursor: pointer;
+}
+
+.thumbnail {
+  height: 100px;
+}
+
+.active {
+}
+
+/* INFORMAÇÕES DO PRODUTO */
+
+#product-info {
+  padding: 3rem 0 0 3rem;
+}
+
+.company {
+  font-weight: 700;
+  color: var(--Orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.product-title {
+  color: var(--Very-dark-blue);
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
+
+.product-description {
+  color: var(--Dark-grayish-blue);
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.price {
+  color: var(--Very-dark-blue);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.discount {
+  background-color: var(--Pale-orange);
+  color: var(--Orange);
+  padding: 0.2rem 0.5rem;
+  border-radius: 25%;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.last-price {
+  color: var(--Dark-grayish-blue);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: line-through;
+  margin-top: -15px;
+  margin-bottom: 3rem;
+}
+
+.set-quantity {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.set-quantity i {
+  color: var(--Orange);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.set-quantity i:hover {
+  color: var(--Lighter-orange);
+}
+
+#quantity {
+  max-width: 30px;
+  border: none;
+  font-weight: 700;
+  margin: 1.5rem;
+}
+
+.btn {
+  background-color: var(--Orange);
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.7rem 2.5rem;
+}
+
+.btn:hover {
+  background-color: var(--Lighter-orange);
+}
+
+.btn:active {
+  background-color: var(--Orange) !important;
+}

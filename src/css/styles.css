@@ -23,29 +23,92 @@
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  position: relative;
 }
 
 .pointer {
   cursor: pointer;
 }
 
+/* NAVBAR */
+
 .navbar {
   width: 80%;
   margin: 0 auto;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 0 2rem;
   border-bottom: 1px solid hsla(217, 9%, 45%, 0.2);
 }
 
-.user-area i {
+.nav-link {
+  position: relative;
+  color: var(--Dark-grayish-blue);
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  background-color: var(--Orange);
+  bottom: -2.8rem;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+}
+
+.user-area .cart {
+  position: relative;
   font-size: 20px;
+  opacity: 0.7;
+}
+
+.user-area .cart::after {
+  position: absolute;
+  top: -5%;
+  right: 35%;
+  content: attr(data-value);
+  color: var(--White);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0 0.5rem;
+  background-color: var(--Orange);
+  border-radius: 2rem;
+}
+
+.user-area .cart:hover {
+  opacity: 1;
+}
+
+.user-area img:hover {
+  border-radius: 50%;
+  border: 2px solid var(--Orange);
+  scale: 1.1;
+}
+
+#cart-container {
+  position: absolute;
+  top: 5rem;
+  right: 3%;
+  width: 350px;
+  padding: 1rem;
+  background-color: var(--White);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+#cart-container .empty-cart {
+  text-align: center;
+  padding: 4rem;
+  opacity: 0.7;
+}
+
+.hide-cart {
+  display: none;
 }
 
 main > .container {
@@ -232,4 +295,14 @@ main > .container {
 
 .btn:active {
   background-color: var(--Orange) !important;
+}
+
+/* FOOTER */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }

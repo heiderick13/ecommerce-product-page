@@ -306,3 +306,65 @@ main > .container {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* MOBILE */
+
+@media screen and (max-width: 1200px) {
+  #product-info {
+    padding-top: 0;
+  }
+
+  #thumbnails {
+    gap: 0.5rem;
+  }
+
+  .thumbnail {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  #thumbnails {
+    gap: 0.5rem;
+  }
+
+  .thumbnail {
+    height: 50px;
+  }
+
+  .product-description {
+    line-height: 1.2;
+  }
+
+  .set-quantity {
+    padding: 0 2.5rem;
+  }
+
+  .btn {
+    margin-left: 0 !important;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-link {
+    display: none;
+  }
+
+  #product-info {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .product-title {
+    text-align: left;
+  }
+
+  .product-description {
+    text-align: justify;
+  }
+
+  .last-price {
+    text-align: left;
+  }
+}

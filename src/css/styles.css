@@ -136,10 +136,10 @@ main > .container {
 }
 
 #modal-imgs .close {
+  color: var(--White);
   top: 0;
-  right: 2%;
+  right: 3%;
   font-size: 36px;
-  color: hsl(0, 0%, 8%);
 }
 
 /* .active {

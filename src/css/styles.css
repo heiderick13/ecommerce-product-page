@@ -39,6 +39,11 @@ body {
   border-bottom: 1px solid hsla(217, 9%, 45%, 0.2);
 }
 
+#burger-menu {
+  font-size: 22px;
+  font-weight: 900;
+}
+
 .nav-link {
   position: relative;
   color: var(--Dark-grayish-blue);
@@ -99,6 +104,7 @@ body {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   font-weight: 700;
+  z-index: 2;
 }
 
 #cart-container .empty-cart {
@@ -111,11 +117,15 @@ body {
   display: none;
 }
 
+/* IMAGENS DO PRODUTO */
+
+#mobile-carousel {
+  display: none;
+}
+
 main > .container {
   padding: 5rem 7rem 2rem;
 }
-
-/* IMAGENS DO PRODUTO */
 
 #product-imgs img {
   border-radius: 1rem;
@@ -191,11 +201,11 @@ main > .container {
 }
 
 #modal-imgs .left {
-  left: -0;
+  left: 0;
 }
 
 #modal-imgs .right {
-  right: -0;
+  right: 0;
 }
 
 #modal-imgs .close {
@@ -204,9 +214,6 @@ main > .container {
   right: 3%;
   font-size: 36px;
 }
-
-/* .active {
-} */
 
 /* INFORMAÇÕES DO PRODUTO */
 
@@ -344,11 +351,34 @@ main > .container {
     margin-left: 0 !important;
     margin-top: 1rem;
   }
+
+  .set-quantity {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 0;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  main > .container {
+    padding: 3rem 3rem 1rem;
+  }
+
   .nav-link {
     display: none;
+  }
+
+  .main-img,
+  #thumbnails {
+    width: 100%;
   }
 
   #product-info {
@@ -366,5 +396,70 @@ main > .container {
 
   .last-price {
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .navbar {
+    width: 90%;
+  }
+  #mobile-carousel {
+    display: block;
+    position: relative;
+    padding: 0;
+  }
+
+  #product-imgs,
+  #modal-imgs {
+    display: none;
+  }
+
+  main > .container {
+    padding: 0;
+  }
+
+  #mobile-carousel img {
+    width: 100%;
+    height: 60vh;
+  }
+
+  #mobile-carousel i {
+    position: absolute;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  #mobile-carousel i:hover {
+    color: var(--Orange);
+  }
+
+  #mobile-carousel .left,
+  #mobile-carousel .right {
+    background-color: var(--White);
+    clip-path: circle();
+    padding: 1rem;
+    top: 40%;
+  }
+
+  #mobile-carousel .left {
+    left: 5%;
+  }
+
+  #mobile-carousel .right {
+    right: 5%;
+  }
+
+  #product-info {
+    padding: 3rem 3rem 5rem;
+    text-align: start;
+  }
+
+  .product-description {
+    line-height: 1.5;
+  }
+
+  .last-price {
+    text-align: right;
+    margin: -40px 0 0;
   }
 }

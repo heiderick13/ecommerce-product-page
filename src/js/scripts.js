@@ -6,7 +6,11 @@ const linksArr = [...links];
 const productQntDisplay = document.querySelector("#quantity");
 const cartIcon = document.querySelector("#cart-icon");
 const cartContainer = document.querySelector("#cart-container");
+const mobileMainImg = document.querySelector("#mobile-carousel img");
+const mobileLeft = document.querySelector("#mobile-carousel .left");
+const mobileRight = document.querySelector("#mobile-carousel .right");
 let productQnt = 0;
+let imgSrcId = 1;
 
 productQntDisplay.textContent = productQnt;
 // cartIcon.setAttribute("data-value", productQnt); add with function
@@ -28,4 +32,18 @@ linksArr.forEach((link) => {
 
 cartIcon.addEventListener("click", () => {
   cartContainer.classList.toggle("hide-cart");
+});
+
+mobileRight.addEventListener("click", () => {
+  if (imgSrcId < 4) {
+    imgSrcId++;
+    mobileMainImg.setAttribute("src", `./images/image-product-${imgSrcId}.jpg`);
+  }
+});
+
+mobileLeft.addEventListener("click", () => {
+  if (imgSrcId > 1) {
+    imgSrcId--;
+    mobileMainImg.setAttribute("src", `./images/image-product-${imgSrcId}.jpg`);
+  }
 });

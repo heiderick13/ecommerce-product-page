@@ -376,6 +376,10 @@ main > .container {
     display: none;
   }
 
+  .col-md-6 {
+    width: 100%;
+  }
+
   .main-img,
   #thumbnails {
     width: 100%;
@@ -429,16 +433,12 @@ main > .container {
     font-weight: 900;
   }
 
-  #mobile-carousel i:hover {
-    color: var(--Orange);
-  }
-
   #mobile-carousel .left,
   #mobile-carousel .right {
-    background-color: var(--White);
+    background-color: hsla(0, 0%, 100%, 0.3);
     clip-path: circle();
-    padding: 1rem;
-    top: 40%;
+    padding: 0.8rem;
+    top: 45%;
   }
 
   #mobile-carousel .left {

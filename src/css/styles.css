@@ -113,7 +113,35 @@ body {
   opacity: 0.7;
 }
 
-.hide-cart {
+.cart-content {
+  width: 100%;
+}
+
+.cart-content img {
+  /* float: left; */
+  height: 50px;
+  border-radius: 5px;
+}
+
+.cart-content i,
+.cart-content p {
+  opacity: 0.7;
+}
+
+.cart-content p {
+  font-weight: 400;
+}
+
+.cart-content i:hover {
+  opacity: 1;
+}
+
+.cart-content .btn {
+  display: block;
+  width: 100%;
+}
+
+.hide {
   display: none;
 }
 

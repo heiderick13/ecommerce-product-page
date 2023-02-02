@@ -31,7 +31,7 @@ linksArr.forEach((link) => {
 });
 
 cartIcon.addEventListener("click", () => {
-  cartContainer.classList.toggle("hide-cart");
+  cartContainer.classList.toggle("hide");
 });
 
 mobileRight.addEventListener("click", () => {

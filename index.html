@@ -42,15 +42,30 @@
       </div>
 
       <span class="user-area justify-self-end d-inline-flex align-items-center">
-        <i id="cart-icon" class="bi bi-cart cart pe-4 pointer"></i>
+        <i id="cart-icon" class="bi bi-cart3 cart pe-4 pointer"></i>
         <img class="pointer" src="images/image-avatar.png" alt="" height="45" />
       </span>
     </nav>
 
-    <div id="cart-container" class="hide-cart">
+    <div id="cart-container" class="hide">
       <p class="cart-title">Cart</p>
       <hr />
       <p class="empty-cart">Your cart is empty.</p>
+
+      <div class="cart-content hide">
+        <div class="d-flex justify-content-between pb-4">
+          <img
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="product thumbnail"
+          />
+          <span class="d-flex flex-row">
+            <p>Fall Limited Edition Sneakers</p>
+            <p class="total-price"></p>
+          </span>
+          <i class="bi bi-trash align-self-center"></i>
+        </div>
+        <button class="btn btn-primary checkout">Checkout</button>
+      </div>
     </div>
 
     <main>

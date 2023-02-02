@@ -345,6 +345,11 @@ main > .container {
 
   .set-quantity {
     padding: 0 2.5rem;
+    font-size: 22px;
+  }
+
+  .set-quantity i {
+    font-size: 26px;
   }
 
   .btn {
@@ -405,8 +410,14 @@ main > .container {
 
 @media screen and (max-width: 498px) {
   .navbar {
-    width: 90%;
+    width: 100%;
+    padding: 1.5rem;
   }
+
+  .user-area img {
+    height: 30px;
+  }
+
   #mobile-carousel {
     display: block;
     position: relative;
@@ -461,5 +472,16 @@ main > .container {
   .last-price {
     text-align: right;
     margin: -40px 0 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .navbar {
+    padding: 1rem;
+    gap: 0 !important;
+  }
+
+  .navbar-brand {
+    padding-left: 1rem;
   }
 }

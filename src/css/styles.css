@@ -32,6 +32,41 @@ body {
 
 /* NAVBAR */
 
+header {
+  position: relative;
+}
+
+#mobile-menu {
+  background-color: var(--White);
+  position: fixed !important;
+  top: 0;
+  right: 100%;
+  width: 70%;
+  height: 100vh;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+#mobile-menu.active {
+  right: 30%;
+}
+
+#mobile-menu i {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  font-size: 24px;
+}
+
+#mobile-menu .nav-link {
+  font-size: 18px;
+  margin: 3.5rem 0 0 2rem;
+}
+
+#mobile-menu .nav-link {
+  display: block;
+}
+
 .navbar {
   width: 80%;
   margin: 0 auto;
@@ -40,8 +75,8 @@ body {
 }
 
 #burger-menu {
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 24px;
+  display: none;
 }
 
 .nav-link {
@@ -53,7 +88,7 @@ body {
   transition: all 0.2s;
 }
 
-.nav-link:hover::after {
+.navbar .nav-link:hover::after {
   content: "";
   position: absolute;
   background-color: var(--Orange);
@@ -343,7 +378,7 @@ main > .container {
   color: hsl(228, 45%, 44%);
 }
 
-/* MOBILE */
+/* RESPONSIVO */
 
 @media screen and (max-width: 1200px) {
   #product-info {
@@ -402,6 +437,10 @@ main > .container {
 }
 
 @media screen and (max-width: 768px) {
+  #burger-menu {
+    display: block;
+  }
+
   main > .container {
     padding: 3rem 3rem 1rem;
   }

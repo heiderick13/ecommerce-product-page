@@ -25,27 +25,46 @@
   </head>
 
   <body>
-    <nav class="navbar d-flex justify-content-start gap-4">
-      <i id="burger-menu" class="bi bi-list"></i>
-      <div class="nav-items d-flex flex-grow-1 align-items-center gap-4">
-        <img
-          class="navbar-brand pe-3 pointer"
-          src="images/logo.svg"
-          alt="Logo sneakers"
-        />
+    <header>
+      <nav id="mobile-menu">
+        <i id="close-menu" class="bi bi-x-lg"></i>
 
         <a class="nav-link" href="#">Collections</a>
         <a class="nav-link" href="#">Men</a>
         <a class="nav-link" href="#">Women</a>
         <a class="nav-link" href="#">About</a>
         <a class="nav-link" href="#">Contact</a>
-      </div>
+      </nav>
 
-      <span class="user-area justify-self-end d-inline-flex align-items-center">
-        <i id="cart-icon" class="bi bi-cart3 cart pe-4 pointer"></i>
-        <img class="pointer" src="images/image-avatar.png" alt="" height="45" />
-      </span>
-    </nav>
+      <nav class="navbar d-flex justify-content-start gap-4">
+        <i id="burger-menu" class="bi bi-list"></i>
+        <div class="nav-items d-flex flex-grow-1 align-items-center gap-4">
+          <img
+            class="navbar-brand pe-3 pointer"
+            src="images/logo.svg"
+            alt="Logo sneakers"
+          />
+
+          <a class="nav-link" href="#">Collections</a>
+          <a class="nav-link" href="#">Men</a>
+          <a class="nav-link" href="#">Women</a>
+          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Contact</a>
+        </div>
+
+        <span
+          class="user-area justify-self-end d-inline-flex align-items-center"
+        >
+          <i id="cart-icon" class="bi bi-cart3 cart pe-4 pointer"></i>
+          <img
+            class="pointer"
+            src="images/image-avatar.png"
+            alt=""
+            height="45"
+          />
+        </span>
+      </nav>
+    </header>
 
     <div id="cart-container" class="hide">
       <p class="cart-title">Cart</p>
@@ -62,7 +81,7 @@
             <p>Fall Limited Edition Sneakers</p>
             <p class="total-price"></p>
           </span>
-          <i class="bi bi-trash align-self-center pointer"></i>
+          <i id="clear-cart" class="bi bi-trash align-self-center pointer"></i>
         </div>
         <button class="btn btn-primary checkout">Checkout</button>
       </div>

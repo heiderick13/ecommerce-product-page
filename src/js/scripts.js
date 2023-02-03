@@ -14,23 +14,36 @@ const mobileRight = document.querySelector("#mobile-carousel .right");
 const plusBtn = document.querySelector("#plus-btn");
 const minusBtn = document.querySelector("#minus-btn");
 const addBtn = document.querySelector("#add-btn");
+const deleteProduct = document.querySelector("#clear-cart");
+const mobileMenu = document.querySelector("#mobile-menu");
+const openMobileMenu = document.querySelector("#burger-menu");
+const closeMobileMenu = document.querySelector("#close-menu");
+
 let productQnt = 0;
 let imgSrcId = 1;
 
 productQntDisplay.textContent = productQnt;
-
 // functions
-function addToCart(qnt) {
-  emptyCart.classList.add("hide");
-  cartContent.classList.remove("hide");
+function addToCart() {
+  if (productQnt > 0) {
+    emptyCart.classList.add("hide");
+    cartContent.classList.remove("hide");
 
-  document.querySelector(
-    ".total-price"
-  ).innerHTML = `$125.00 x ${productQnt} <strong class="ms-2">${(
-    125 * productQnt
-  ).toFixed(2)}</strong>`;
+    document.querySelector(
+      ".total-price"
+    ).innerHTML = `$125.00 x ${productQnt} <strong class="ms-2">${(
+      125 * productQnt
+    ).toFixed(2)}</strong>`;
 
-  cartIcon.setAttribute("data-value", productQnt);
+    cartIcon.setAttribute("data-value", productQnt);
+  }
+}
+
+function clearCart() {
+  cartContent.classList.add("hide");
+  emptyCart.classList.remove("hide");
+
+  cartIcon.setAttribute("data-value", "");
 }
 
 // Event handlers
@@ -79,5 +92,17 @@ minusBtn.addEventListener("click", () => {
 });
 
 addBtn.addEventListener("click", () => {
-  addToCart(productQnt);
+  addToCart();
+});
+
+deleteProduct.addEventListener("click", () => {
+  clearCart();
+});
+
+openMobileMenu.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+});
+
+closeMobileMenu.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
 });

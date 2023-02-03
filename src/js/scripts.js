@@ -6,14 +6,32 @@ const linksArr = [...links];
 const productQntDisplay = document.querySelector("#quantity");
 const cartIcon = document.querySelector("#cart-icon");
 const cartContainer = document.querySelector("#cart-container");
+const emptyCart = document.querySelector(".empty-cart");
+const cartContent = document.querySelector(".cart-content");
 const mobileMainImg = document.querySelector("#mobile-carousel img");
 const mobileLeft = document.querySelector("#mobile-carousel .left");
 const mobileRight = document.querySelector("#mobile-carousel .right");
+const plusBtn = document.querySelector("#plus-btn");
+const minusBtn = document.querySelector("#minus-btn");
+const addBtn = document.querySelector("#add-btn");
 let productQnt = 0;
 let imgSrcId = 1;
 
 productQntDisplay.textContent = productQnt;
-// cartIcon.setAttribute("data-value", productQnt); add with function
+
+// functions
+function addToCart(qnt) {
+  emptyCart.classList.add("hide");
+  cartContent.classList.remove("hide");
+
+  document.querySelector(
+    ".total-price"
+  ).innerHTML = `$125.00 x ${productQnt} <strong class="ms-2">${(
+    125 * productQnt
+  ).toFixed(2)}</strong>`;
+
+  cartIcon.setAttribute("data-value", productQnt);
+}
 
 // Event handlers
 mainImage.addEventListener("click", () => {
@@ -46,4 +64,20 @@ mobileLeft.addEventListener("click", () => {
     imgSrcId--;
     mobileMainImg.setAttribute("src", `./images/image-product-${imgSrcId}.jpg`);
   }
+});
+
+plusBtn.addEventListener("click", () => {
+  productQnt++;
+  productQntDisplay.textContent = productQnt;
+});
+
+minusBtn.addEventListener("click", () => {
+  if (productQnt > 0) {
+    productQnt--;
+    productQntDisplay.textContent = productQnt;
+  }
+});
+
+addBtn.addEventListener("click", () => {
+  addToCart(productQnt);
 });

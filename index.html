@@ -58,11 +58,11 @@
             src="./images/image-product-1-thumbnail.jpg"
             alt="product thumbnail"
           />
-          <span class="d-flex flex-row">
+          <span class="d-flex flex-column">
             <p>Fall Limited Edition Sneakers</p>
             <p class="total-price"></p>
           </span>
-          <i class="bi bi-trash align-self-center"></i>
+          <i class="bi bi-trash align-self-center pointer"></i>
         </div>
         <button class="btn btn-primary checkout">Checkout</button>
       </div>
@@ -155,12 +155,13 @@
             <p class="last-price">$250</p>
 
             <span class="set-quantity">
-              <i class="bi bi-dash"></i>
+              <i id="minus-btn" class="bi bi-dash"></i>
               <span id="quantity">0</span>
-              <i class="bi bi-plus"></i>
+              <i id="plus-btn" class="bi bi-plus"></i>
             </span>
 
             <button
+              id="add-btn"
               class="btn btn-primary add-to-cart d-inline-flex gap-3 ms-3"
             >
               <i class="bi bi-cart"></i> Add to cart

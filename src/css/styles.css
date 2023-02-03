@@ -512,4 +512,14 @@ main > .container {
   .navbar-brand {
     padding-left: 1rem;
   }
+
+  #cart-container {
+    top: 4rem;
+    right: 2%;
+    width: 300px;
+  }
+
+  #cart-container .empty-cart {
+    padding: 2rem 3rem;
+  }
 }

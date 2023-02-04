@@ -42,8 +42,8 @@ header {
   top: 0;
   right: 100%;
   width: 70%;
-  height: 100vh;
-  transition: 0.4s;
+  height: 100%;
+  transition: 0.3s;
   z-index: 2;
 }
 
@@ -53,7 +53,7 @@ header {
 
 #mobile-menu i {
   position: absolute;
-  top: 5%;
+  top: 2%;
   right: 10%;
   font-size: 24px;
 }
@@ -67,16 +67,26 @@ header {
   display: block;
 }
 
+#burger-menu {
+  font-size: 24px;
+  display: none;
+}
+
+.overlay {
+  background-color: hsla(0, 0%, 0%, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
 .navbar {
   width: 80%;
   margin: 0 auto;
   padding: 1.5rem 0 2rem;
   border-bottom: 1px solid hsla(217, 9%, 45%, 0.2);
-}
-
-#burger-menu {
-  font-size: 24px;
-  display: none;
 }
 
 .nav-link {

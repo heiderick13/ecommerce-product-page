@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const imgsModal = document.querySelector("#modal-imgs");
 const mainImage = document.querySelector(".main-img");
 const closeModal = document.querySelector(".close");
@@ -23,6 +24,7 @@ let productQnt = 0;
 let imgSrcId = 1;
 
 productQntDisplay.textContent = productQnt;
+
 // functions
 function addToCart() {
   if (productQnt > 0) {
@@ -44,6 +46,21 @@ function clearCart() {
   emptyCart.classList.remove("hide");
 
   cartIcon.setAttribute("data-value", "");
+}
+
+function menuOpen() {
+  let overlay = document.createElement("div");
+  overlay.classList = "overlay";
+
+  mobileMenu.classList.add("active");
+  body.appendChild(overlay);
+}
+
+function menuClose() {
+  let overlay = document.querySelector(".overlay");
+  overlay.remove();
+
+  mobileMenu.classList.remove("active");
 }
 
 // Event handlers
@@ -100,9 +117,9 @@ deleteProduct.addEventListener("click", () => {
 });
 
 openMobileMenu.addEventListener("click", () => {
-  mobileMenu.classList.add("active");
+  menuOpen();
 });
 
 closeMobileMenu.addEventListener("click", () => {
-  mobileMenu.classList.remove("active");
+  menuClose();
 });

@@ -33,9 +33,9 @@ function addToCart() {
 
     document.querySelector(
       ".total-price"
-    ).innerHTML = `$125.00 x ${productQnt} <strong class="ms-2">${(
+    ).innerHTML = `$125.00 x ${productQnt} <b class="ms-2">${(
       125 * productQnt
-    ).toFixed(2)}</strong>`;
+    ).toFixed(2)}</b>`;
 
     cartIcon.setAttribute("data-value", productQnt);
   }

@@ -174,7 +174,14 @@ header {
 
 .cart-content p {
   font-weight: 400;
-  height: 12px;
+  height: 18px;
+  margin-bottom: 0.5rem !important;
+}
+
+.cart-content p:nth-of-type(1) {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cart-content i:hover {
@@ -496,6 +503,16 @@ main > .container {
     height: 30px;
   }
 
+  #cart-container {
+    top: 6rem;
+    right: 2%;
+    width: 95%;
+  }
+
+  #cart-container .empty-cart {
+    padding: 2rem 3rem;
+  }
+
   #mobile-carousel {
     display: block;
     position: relative;
@@ -561,15 +578,5 @@ main > .container {
 
   .navbar-brand {
     padding-left: 1rem;
-  }
-
-  #cart-container {
-    top: 4rem;
-    right: 2%;
-    width: 300px;
-  }
-
-  #cart-container .empty-cart {
-    padding: 2rem 3rem;
   }
 }

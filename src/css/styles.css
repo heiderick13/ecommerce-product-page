@@ -176,8 +176,15 @@ header {
 }
 
 .cart-content p {
+  margin: 0;
   font-weight: 400;
-  height: 12px;
+  height: 18px;
+}
+
+#cart-container p:nth-of-type(1) {
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cart-content i:hover {
@@ -404,17 +411,14 @@ main > .container {
   }
 
   .thumbnail {
-    height: 70px;
+    height: 70px !important;
   }
 }
 
 @media screen and (max-width: 998px) {
   #thumbnails {
     gap: 0.5rem;
-  }
-
-  .thumbnail {
-    height: 50px;
+    overflow-x: auto;
   }
 
   .product-description {
@@ -571,7 +575,7 @@ main > .container {
 
   .last-price {
     text-align: right;
-    margin: -40px 0 0;
+    margin: -43px 0 0;
   }
 }
 
@@ -593,5 +597,9 @@ main > .container {
 
   #cart-container .empty-cart {
     padding: 2rem 3rem;
+  }
+
+  .cart-content p {
+    margin-left: 1rem;
   }
 }

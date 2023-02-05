@@ -10,8 +10,8 @@ const cartContainer = document.querySelector("#cart-container");
 const emptyCart = document.querySelector(".empty-cart");
 const cartContent = document.querySelector(".cart-content");
 const mobileMainImg = document.querySelector("#mobile-carousel img");
-const mobileLeft = document.querySelector("#mobile-carousel .left");
 const mobileRight = document.querySelector("#mobile-carousel .right");
+const mobileLeft = document.querySelector("#mobile-carousel .left");
 const plusBtn = document.querySelector("#plus-btn");
 const minusBtn = document.querySelector("#minus-btn");
 const addBtn = document.querySelector("#add-btn");
@@ -19,6 +19,8 @@ const deleteProduct = document.querySelector("#clear-cart");
 const mobileMenu = document.querySelector("#mobile-menu");
 const openMobileMenu = document.querySelector("#burger-menu");
 const closeMobileMenu = document.querySelector("#close-menu");
+const controls = document.querySelectorAll(".control");
+const current = 0;
 
 let productQnt = 0;
 let imgSrcId = 1;
@@ -123,3 +125,9 @@ openMobileMenu.addEventListener("click", () => {
 closeMobileMenu.addEventListener("click", () => {
   menuClose();
 });
+
+controls.forEach((control) =>
+  control.addEventListener("click", (e) => {
+    slide(e, current);
+  })
+);

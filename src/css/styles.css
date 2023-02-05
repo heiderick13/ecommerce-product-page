@@ -376,11 +376,13 @@ main > .container {
 /* FOOTER */
 
 .attribution {
+  margin-bottom: 0.5rem;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  text-decoration: none;
 }
 
 /* RESPONSIVO */

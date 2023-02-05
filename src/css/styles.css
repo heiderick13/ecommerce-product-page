@@ -205,11 +205,11 @@ main > .container {
 }
 
 .main-img,
-.thumbnails {
+#thumbnails {
   width: 95%;
 }
 
-.thumbnails {
+#thumbnails {
   padding: 2rem 0;
   cursor: pointer;
 }

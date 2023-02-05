@@ -1,12 +1,11 @@
-const body = document.querySelector("body");
+const links = document.querySelectorAll("a");
+const linksArr = [...links];
+const thumbs = document.querySelectorAll("#thumbnails .thumbnail");
 const imgsModal = document.querySelector("#modal-imgs");
 const mainImage = document.querySelector(".main-img");
 const closeModal = document.querySelector(".close");
-const links = document.querySelectorAll("a");
-const linksArr = [...links];
 const productQntDisplay = document.querySelector("#quantity");
 const cartIcon = document.querySelector("#cart-icon");
-const cartContainer = document.querySelector("#cart-container");
 const emptyCart = document.querySelector(".empty-cart");
 const cartContent = document.querySelector(".cart-content");
 const mobileMainImg = document.querySelector("#mobile-carousel img");
@@ -19,8 +18,6 @@ const deleteProduct = document.querySelector("#clear-cart");
 const mobileMenu = document.querySelector("#mobile-menu");
 const openMobileMenu = document.querySelector("#burger-menu");
 const closeMobileMenu = document.querySelector("#close-menu");
-const controls = document.querySelectorAll(".control");
-const current = 0;
 
 let productQnt = 0;
 let imgSrcId = 1;
@@ -51,6 +48,7 @@ function clearCart() {
 }
 
 function menuOpen() {
+  let body = document.querySelector("body");
   let overlay = document.createElement("div");
   overlay.classList = "overlay";
 
@@ -63,6 +61,17 @@ function menuClose() {
   overlay.remove();
 
   mobileMenu.classList.remove("active");
+}
+
+function changeMainImg(e) {
+  let id = e.target.getAttribute("id");
+  mainImage.setAttribute("src", `./images/image-product-${id}.jpg`);
+
+  for (const thumb of thumbs) {
+    thumb.classList.remove("active");
+  }
+
+  thumbs[id - 1].classList.add("active");
 }
 
 // Event handlers
@@ -81,6 +90,7 @@ linksArr.forEach((link) => {
 });
 
 cartIcon.addEventListener("click", () => {
+  let cartContainer = document.querySelector("#cart-container");
   cartContainer.classList.toggle("hide");
 });
 
@@ -126,8 +136,8 @@ closeMobileMenu.addEventListener("click", () => {
   menuClose();
 });
 
-controls.forEach((control) =>
-  control.addEventListener("click", (e) => {
-    slide(e, current);
-  })
-);
+thumbs.forEach((thumb) => {
+  thumb.addEventListener("click", (e) => {
+    changeMainImg(e);
+  });
+});

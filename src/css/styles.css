@@ -133,8 +133,11 @@ header {
   opacity: 1;
 }
 
-.user-area img:hover {
+.user-area img {
   border-radius: 50%;
+}
+
+.user-area img:hover {
   border: 2px solid var(--Orange);
   scale: 1.1;
 }
@@ -210,13 +213,13 @@ main > .container {
 }
 
 #thumbnails {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   cursor: pointer;
 }
 
 .carousel-indicators {
   position: relative !important;
-  width: 550px !important;
+  width: 100% !important;
   z-index: 2;
   display: flex;
   justify-content: space-evenly;
@@ -225,8 +228,6 @@ main > .container {
 }
 
 .carousel-indicators [data-bs-target] {
-  box-sizing: content-box;
-  flex: 0 1 auto;
   width: 100px;
   height: 100px;
   padding: 0;
@@ -253,7 +254,7 @@ main > .container {
 }
 
 #modal-imgs {
-  width: 600px;
+  width: 550px;
   margin: auto;
   padding: 3rem 1.5rem 1.5rem;
   text-align: center;
